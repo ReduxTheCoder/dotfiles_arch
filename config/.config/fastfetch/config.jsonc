@@ -1,0 +1,122 @@
+//
+//    __          _    __     _       _
+//   / _|        | |  / _|   | |     | |
+//  | |_ __ _ ___| |_| |_ ___| |_ ___| |__
+//  |  _/ _` / __| __|  _/ _ \ __/ __| '_ \
+//  | || (_| \__ \ |_| ||  __/ || (__| | | |
+//  |_| \__,_|___/\__|_| \___|\__\___|_| |_|  Arch
+//
+//  by Sofiya
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "color": { "1": "white", "2": "white" },
+    "type": "builtin",
+    "source": "arch",
+    // "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/png/\" -name \"*.png\" | shuf -n 1)",
+    "padding": {
+      "top": 1,
+      "right": 3,
+      "left": 3
+    },
+    "height": 18
+  },
+  "display": {
+    // Make the separator explicitly plain white
+    "separator": "\u001b[37m ▸ \u001b[0m"
+  },
+  "modules": [
+    {
+      "type": "os",
+      "key": "◤",
+      "keycolor": "38;2;0;0;0",
+      "format": "{name}"
+    },
+    {
+      "type": "kernel",
+      "key": "┃",
+      "keycolor": "white",
+      "format": "{sysname}"
+    },
+    {
+      "type": "de",
+      "key": "┃",
+      "keycolor": "white",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "wm",
+      "key": "┃",
+      "keycolor": "white",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "packages",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[37m\u001b[0m"
+    },
+    {
+      "type": "memory",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "cpu",
+      "key": "┃",
+      "keycolor": "white",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "swap",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "disk",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[37m\u001b[0m"
+    },
+    {
+      "type": "uptime",
+      "key": "┃",
+      "keycolor": "white"
+    },
+    {
+      "type": "terminal",
+      "key": "◣",
+      "keycolor": "white",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "colors",
+      "paddingLeft": 24,
+      "symbol": "circle",
+      "block": {
+        "width": 10
+      }
+    },
+    {
+      "type": "custom",
+      "format": "\n"
+    },
+    {
+      "type": "custom",
+      "format": "\n"
+    }
+  ]
+}
+

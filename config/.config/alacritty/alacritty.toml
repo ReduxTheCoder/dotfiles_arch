@@ -1,0 +1,25 @@
+[window]
+padding.x = 10
+padding.y = 10
+title = "Zen Terminal"
+decorations = "None"
+
+blur = true
+opacity = 0.5
+
+startup_mode = "Maximized"
+
+[font]
+size = 10
+
+[cursor]
+thickness = 0.1
+style.shape = "Beam"
+style.blinking = "Always"
+unfocused_hollow = false
+
+[mouse]
+hide_when_typing = true
+
+[bell]
+duration = 1
