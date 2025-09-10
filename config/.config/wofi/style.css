@@ -1,10 +1,7 @@
 * {
     font-family: 'JetBrains mono';
     font-size: 14px;
-<<<<<<< HEAD
-=======
 	
->>>>>>> 503db5b (fixed wofi config)
  }
 
 window {
@@ -16,26 +13,14 @@ window {
 
 #input {
     margin: 5px;
-<<<<<<< HEAD
     border: 2px solid rgb(24, 24, 37);
     background-color: rgb(24, 24, 37);
-=======
-    border: 2px solid rgb(17, 17, 27);
-    background-color: rgb(24, 24, 37);
-	color: rgb(255, 255, 255);
->>>>>>> 503db5b (fixed wofi config)
-    border-radius: 10px;
 }
 
 #inner-box {
     margin: 5px;
     border: 2px solid rgb(24, 24, 37);
-    background-color: rgb(24, 24, 37);
-    border-radius: 10px;
-<<<<<<< HEAD
-=======
 	color: rgb(255, 255, 255); 
->>>>>>> 503db5b (fixed wofi config)
 }
 
 #outer-box {
@@ -54,10 +39,5 @@ window {
 
 #text {
     margin: 5px;
-<<<<<<< HEAD
-    border: 2px solid rgba(2, 2, 2, 0);
-    background-color: rgba(2, 2, 2, 0);
-=======
->>>>>>> 503db5b (fixed wofi config)
     border-radius: 10px;
 }
