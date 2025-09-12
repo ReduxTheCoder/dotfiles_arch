@@ -14,6 +14,7 @@ window {
 #input {
     margin: 5px;
     border: 2px solid rgb(24, 24, 37);
+	color: rgb(205, 214, 244);
     background-color: rgb(24, 24, 37);
 }
 
