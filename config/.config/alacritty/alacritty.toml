@@ -20,6 +20,3 @@ unfocused_hollow = false
 
 [mouse]
 hide_when_typing = true
-
-[bell]
-duration = 1
