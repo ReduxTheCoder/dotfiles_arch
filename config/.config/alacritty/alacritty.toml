@@ -22,3 +22,4 @@ hide_when_typing = true
 
 [colors]
 primary.background = "#1e1e2e"
+primary.foreground = "#cdd6f4"
