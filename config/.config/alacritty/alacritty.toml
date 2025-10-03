@@ -1,7 +1,6 @@
 [window]
 padding.x = 10
 padding.y = 10
-title = "Zen Terminal"
 decorations = "None"
 
 blur = true
@@ -20,3 +19,6 @@ unfocused_hollow = false
 
 [mouse]
 hide_when_typing = true
+
+[colors]
+primary.background = "#1e1e2e"
