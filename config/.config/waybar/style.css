@@ -2,7 +2,7 @@
    Global settings
 -------------------------------------------------- */
 * {
-    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-family: 'JetbrainsMono NFP', 'JetbrainsMono NFP', 'JetbrainsMono NFP', monospace;
     font-size: 13px;
     font-weight: bold; /* This makes text bold */
 }
