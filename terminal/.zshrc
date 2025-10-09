@@ -1,34 +1,52 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=30000
-SAVEHIST=30000
+# ------------------------
+# Oh My Zsh
+# ------------------------
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"  # OMZ theme (Starship will override prompt)
 
-# Use Emacs keybindings
-bindkey -e
+plugins=(
+    git
+    fzf-tab
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
-# Load zsh completion system
+# Source Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
+# ------------------------
+# Tab Completion
+# ------------------------
 autoload -Uz compinit
 compinit
 
-# Autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Use fzf for tab completion
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
-# Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ------------------------
+# History Options
+# ------------------------
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+HISTSIZE=10000
+SAVEHIST=10000
+setopt CORRECT
 
-# Starship prompt initialization
-eval "$(starship init zsh)"
+# Optional: menu selection for completion
+# zstyle ':completion:*' menu select
 
-# zoxide for smarter cd
-eval "$(zoxide init --cmd cd zsh)"
+# ------------------------
+# zoxide (directory jumping)
+# ------------------------
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
 
-# Keybindings for autosuggestions and arrow keys
-bindkey '^I' autosuggest-accept
-bindkey "^[[C" forward-char      # Right arrow
-bindkey "^[[D" backward-char     # Left arrow
-bindkey "^[[A" up-line-or-history   # Up arrow
-bindkey "^[[B" down-line-or-history # Down arrow
-
-# Export user local bin to PATH
-export PATH="$HOME/.local/bin:$PATH"
-
+# ------------------------
+# Starship prompt
+# ------------------------
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+fi
