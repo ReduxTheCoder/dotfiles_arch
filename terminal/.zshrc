@@ -1,9 +1,13 @@
 # ------------------------
+# Starship prompt
+# ------------------------
+eval "$(starship init zsh)"
+
+# ------------------------
 # Oh My Zsh
 # ------------------------
 export PATH="$HOME/.cargo/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"  # OMZ theme (Starship will override prompt)
 
 plugins=(
     git
@@ -41,18 +45,10 @@ setopt CORRECT
 # ------------------------
 # zoxide (directory jumping)
 # ------------------------
-if command -v zoxide >/dev/null 2>&1; then
-    eval "$(zoxide init --cmd cd zsh)"
-fi
-
-# ------------------------
-# Starship prompt
-# ------------------------
-if command -v starship >/dev/null 2>&1; then
-    eval "$(starship init zsh)"
-fi
+eval "$(zoxide init --cmd cd zsh)"
 
 # ------------------------
 # Other
 # -----------------------
 export QT_QPA_PLATFORMTHEME=qt6ct
+. ~/stuff/bin/boot.sh
