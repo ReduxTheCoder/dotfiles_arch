@@ -1,6 +1,7 @@
 # ------------------------
 # Oh My Zsh
 # ------------------------
+export PATH="$HOME/.cargo/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"  # OMZ theme (Starship will override prompt)
 
@@ -50,3 +51,8 @@ fi
 if command -v starship >/dev/null 2>&1; then
     eval "$(starship init zsh)"
 fi
+
+# ------------------------
+# Other
+# -----------------------
+export QT_QPA_PLATFORMTHEME=qt6ct
