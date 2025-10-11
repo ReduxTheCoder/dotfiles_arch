@@ -31,7 +31,7 @@
     "custom/powermenu": {
         "format": "",
         "exec": "echo click",
-        "on-click": "zsh ~/bin/powrbutton.sh",
+        "on-click": "zsh ~/.bin/pwrmenu.sh",
         "interval": 3600
     },
 
