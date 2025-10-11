@@ -1,24 +1,17 @@
 add_newline = true # Whenever to add a newline between commands
-# ~/.config/starship.toml
 
-# Top-level prompt format
-format = """
-$directory $git_branch$git_state
-$character
-"""
+format = '''
+[╭](bold white) $directory$git_branch$git_status
+[╰](bold white) $character'''
 
 [directory]
-truncation_length = 3
+style = 'white'
+truncation_length = 8
+truncation_symbol = '.../'
 
 [git_branch]
-symbol = " "
-format = "[$symbol$branch]($style)"
-
-[git_state]
-format = " ($all_status)"  # shows staged, unstaged, untracked counts
-style = "yellow"
+symbol = ' '
 
 [character]
-success_symbol = "❯"
-error_symbol = "✗"
-
+success_symbol = '[>](bold white)'
+error_symbol = '[>](bold red)'
